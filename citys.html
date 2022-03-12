@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cities</title>
+    <style>
+         body{
+            background:url(back.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+    .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+      
+      .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #4CAF50;
+      }
+      
+      .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+      }
+      
+      .button2 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+      }
+      
+      .button2:hover {
+        background-color: #008CBA;
+        color: white;
+      }
+      .button3{
+        background-color: white; 
+        color: black; 
+        border: 2px solid #e4871c;
+      }
+      
+      .button3:hover {
+        background-color: #f1730b;
+        color: white;
+      }
+      .button4 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #f0e005;
+      }
+      
+      .button4:hover {
+        background-color: #c51559;
+        color: white;
+      }
+      .button5 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #ec0606;
+      }
+      
+      .button5:hover {
+        background-color: #e0350a;
+        color: white;
+      }
+      .button6 {
+        background-color: rgb(238, 173, 76); 
+        color: black; 
+        border: 2px solid #f19813;
+      }
+    </style>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="index.html">
+    <button  class="button button6" style="text-decoration: none;">Welcome page</button></a>
+    <a href="about.html"><button  class="button button6" style="text-decoration: none;">About</button></a><br>
+<img src="unnamed.png" alt="logo" height="300" width="300" style="margin-left: 600px; margin-top: 50px; border-radius:60px ;"><br>
+    <!-- <h1 style="text-align: center; font-size:xx-large; font-style: italic; color: blanchedalmond; " >Hangout Buds</h1> -->
+    
+    <a href="bikaner.html">
+      <button  style="margin-left: 1000px; border-radius: 20px ;" class="button button1">Bikaner</button><br></a>
+      <pre style="color: #fafafa;font-family: cursive;font-size: 30px; ">
+                                                                               AUTHENTIC SWEET AND SPICY TASTE OF BIKANER.</pre>    
+     <!-- <pre style="color: #fafafa;font-family: cursive;font-size: 25px; ">
+                                                                                          Bikaner in Rajasthan is famous worldwide for its snack – Bhujia.
+                                                                                             But the culinary scene of Bikaner food has so much more to offer.
+                                                                                                      Are you wondering what to eat in Bikaner?</pre>                                                                                                                                                -->
+     <a href="Chandigarh/chandigarh.htm">
+    <button style="border-radius: 20px; margin-left: 1000px;" class="button button2 ">Chandigarh</button><br></a>
+     <pre style="color: #fffffd;font-family: cursive;font-size: 30px; ">
+                                                                                                   Delctable taste of punjab</pre>
+   <a href="Syntax/jaipur.htm">
+  <button style="border-radius: 20px ; margin-left: 1020px;" class="button button3">Jaipur</button><br></a>
+     <pre style="color: #fafafa;font-family: cursive;font-size: 30px; ">
+                                                                                    Savouring the dishes of this famous pink city is not 
+                                                                                               just about tasting the local cuisines
+                                                                                                   - it is a cultural experience!</pre>
+    <a href="lucknow.html"> 
+     <button style="border-radius: 20px ;margin-left: 1010px;" class="button button4">Lucknow</button><br></a>
+     <pre style="color: #fafafa;font-family: cursive;font-size: 30px; ">
+                                                                                        Muskuraiye Janaab, aap Lucknow mein hain,’
+                                                                                      speaks the slogan at every corner of this city! </pre>
+    <a href="meerut.html">  
+   <button style="border-radius: 20px ;margin-left: 1015px;" class="button button5">Meerut</button><br></a>
+     <pre style="color: #fafafa;font-family: cursive;font-size: 30px;text-decoration: none; ">
+                                                                        Meerut, famous for Revdi, Gajak is a paradise for food lovers</pre>
+                                                                     
+     <div class="wrapper">
+      <div class="display">
+         <div id="time"></div>
+      </div>
+      <span></span>
+      <span></span>
+   </div>
+   <script>
+      setInterval(()=>{
+        const time = document.querySelector(".display #time");
+        let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let day_night = "AM";
+        if(hours > 12){
+          day_night = "PM";
+          hours = hours - 12;
+        }
+        if(seconds < 10){
+          seconds = "0" + seconds;
+        }
+        if(minutes < 10){
+          minutes = "0" + minutes;
+        }
+        if(hours < 10){
+          hours = "0" + hours;
+        }
+        time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+      });
+   </script>
+</body>
+</html>

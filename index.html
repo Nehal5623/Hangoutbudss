@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangout main page</title>
+    
+    <style type="text/css">
+        body{
+            background:url(back.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+        .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+      .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #045664;
+      }
+      
+      .button1:hover {
+        background-color:  rgb(238, 173, 76);
+        color: white;
+      }
+      .button2 {
+        background-color: rgb(238, 173, 76); 
+        color: black; 
+        border: 2px solid #e68507;
+        
+      }
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html">
+    <button  class="button button2" style="text-decoration: none;">Welcome page</button></a>
+    <a href="about.html"><button  class="button button2" style="text-decoration: none;">About</button></a><br>
+
+    <pre style="font-size: 40px; font-family:brush script MT; color: rgb(247, 243, 9); object-position: 50% 50% ;">                                      "You don't need a silver fork to eat good food."<img src="unnamed.png" alt="logo" height="300" width="300" style=" float: right; margin-right:100px ; margin-top: 60px; border-radius:60px ;"></pre>
+    
+    <br><br><BR>
+    
+     <pre style="font-size: 40px; font-family:brush script MT; color: rgb(243, 204, 145);">
+                                                                          Hangout  buds.
+
+                                                                           Welcomes you 
+                                                                      to the exotic flavours
+                                                                       of worldwide cuisine.   
+
+</pre>
+     <button  class="button button1" style="margin-left: 790px;border-radius: 20px;"><a style="text-decoration: solid; color: rgb(15, 15, 7); font-style: italic;" href="citys.html"> <strong> Explore  your favourite cities</strong></a></button><br>
+     <br><br>
+     <br><br>
+     <br><br>
+     <br><br>
+     <br><br>
+     <div class="wrapper">
+        <div class="display">
+           <div id="time"></div>
+        </div>
+        <span></span>
+        <span></span>
+     </div>
+     <script>
+        setInterval(()=>{
+          const time = document.querySelector(".display #time");
+          let date = new Date();
+          let hours = date.getHours();
+          let minutes = date.getMinutes();
+          let seconds = date.getSeconds();
+          let day_night = "AM";
+          if(hours > 12){
+            day_night = "PM";
+            hours = hours - 12;
+          }
+          if(seconds < 10){
+            seconds = "0" + seconds;
+          }
+          if(minutes < 10){
+            minutes = "0" + minutes;
+          }
+          if(hours < 10){
+            hours = "0" + hours;
+          }
+          time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+        });
+     </script>  
+<!-- 
+    <div>
+        <ul>
+          <li>
+            <a href="https://www.trivago.in/en-IN/lm?__wr=21&tc=18&themeId=450&sem_keyword=bikaner&sem_creativeid=75729007388771&sem_matchtype=be&sem_network=o&sem_device=c&sem_campaignid=367772751&sem_adgroupid=1211662267292996&sem_targetid=kwd-75729225687560%3Aloc-90&cipc=sem&cip=9129001363&msclkid=65394dbdc13515a4d5b72f9645fef4f6&search=200-336161" target="_blank">Bikaner</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Jaipur</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Meerut</a>
+          </li>
+          <li>
+            <a href="" target="_blank">lucknow</a>
+          </li>
+          <li>
+            <a href="" target="_blank">Chandigarh</a>
+          </li>
+        </ul>
+      </div> -->
+</body>
+</html>
